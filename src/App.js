@@ -1,6 +1,10 @@
 
 import React, { useEffect, useState } from 'react';
 import { FiArrowRight } from "react-icons/fi";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
 import './App.css';
 //import ScrollColorTransition from './components/scroll';
 
@@ -14,9 +18,9 @@ const App = () => {
       const scrollY = window.scrollY;
       let newColor = '';
 
-      if (scrollY < 500) {
+      if (scrollY < 400) {
         newColor = 'blue';
-      } else if (scrollY >= 500 && scrollY < 1000) {
+      } else if (scrollY >= 400 && scrollY < 1000) {
         newColor = 'pink';
       } else {
         newColor = 'black';
@@ -35,6 +39,21 @@ const App = () => {
   return (
     <div className="scroll-color-change" style={{ backgroundColor: bgColor }}>
         
+
+      <Navbar bg="dark" data-bs-theme="blue">
+        <Container>
+          <Navbar.Brand href="#home" id="barr">Greek Invention</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home" id="barr">HOME</Nav.Link>
+            <Nav.Link href="#features" id="barr">WORKS</Nav.Link>
+            <Nav.Link href="#pricing" id="barr">TECHNOLOGIES</Nav.Link>
+            <Nav.Link href="#features" id="barr">SERVICES</Nav.Link>
+            <Nav.Link href="#pricing" id="barr">COMPANY</Nav.Link>
+            <Nav.Link href="#features" id="barr">CONTACTS</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+      <br />
     <div class="colorr">
         <div class="container">
             <div class="row">
@@ -57,7 +76,7 @@ const App = () => {
         </div>
         <div class="container text-center">
             <div class="row text-ceneter">
-                <div class="col-12 col-md-6  backgroundColor1 text-center order-1 order-md-2">
+                <div class="col-12 col-md-6  backgroundColor1 text-center order-2 order-md-1">
                     <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png" class="imgsize p-5 m-5 text-center " />
                 </div>
                 <div class="col-12 col-md-6 backgroundColor1 p-5 order-1 order-md-2">
@@ -77,10 +96,10 @@ const App = () => {
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-6 backgroundColor1 text-center order-1 order-md-2">
+                <div class="col-12 col-md-6 backgroundColor1 text-center order-2 order-md-1">
                     <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/foodmunch-banner-bg.png" class="imgsize p-5 m-5 "/>
                 </div>
-                <div class="col-12 col-md-6 backgroundColor1 p-5 order-2 order-md-1">
+                <div class="col-12 col-md-6 backgroundColor1 p-5 order-1 order-md-2">
                     <h1>
                         Industrial IoT
                     </h1>
